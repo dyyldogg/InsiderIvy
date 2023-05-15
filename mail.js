@@ -14,4 +14,18 @@ fasebase.initializeApp(firebaseConfig);
 
 //reference your database
 
-firebase.database().ref('IvyInsider')
+var contactFormDB = firebase.database().ref('IvyInsider');
+document.getElementById('IvyInsider').addEvenetListen('submit', submitForm);
+
+
+function submitForm(e){
+  e.preventDefault();
+
+ var firstName = getElementVal('firstname');
+ var lastName =  getElementVal('lastName');
+ var 
+}
+
+const getElementVal =  (id) => {
+    return document.getElementById(id).value;
+}

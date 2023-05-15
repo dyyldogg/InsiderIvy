@@ -23,8 +23,15 @@ function submitForm(e){
 
  var firstName = getElementVal('firstname');
  var lastName =  getElementVal('lastName');
- var 
+ var email = getElementVal('email');
+ var tel = getElementVal('tel');
+ var highschool = getElementVal('highschool');
+
+ 
 }
+
+const saveMessages = (firstName, lastName, emmail, tel, highschool)
+
 
 const getElementVal =  (id) => {
     return document.getElementById(id).value;

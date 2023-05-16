@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBFkk8YfC7TKnPGCncMdTNvWhGi0IA9q-8",
+  apiKey: "Dad removed your key",
   authDomain: "insiderivy-ea165.firebaseapp.com",
   databaseURL: "https://insiderivy-ea165-default-rtdb.firebaseio.com",
   projectId: "insiderivy-ea165",

@@ -34,7 +34,7 @@ function submitForm(e) {
   saveMessage(firstName, lastName, email, phone, highschool);
 
   // Clear form
-  document.getElementById('contactForm').reset();
+  document.getElementById('conactForm').reset();
 }
 
 // Function to get form values

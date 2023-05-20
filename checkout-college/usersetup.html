@@ -45,15 +45,76 @@
       background-color: lightgreen;
       color: black;
     }
+
+    .profile-image-label {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .profile-image-label input[type="file"] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .profile-image-container {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .profile-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .upload-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #888;
+      font-weight: bold;
+      font-size: 14px;
+    }
   </style>
 
   <!-- JavaScript dependencies -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.default.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"></script>
-
-  <script>
+  <script src="major-search.js"></script>
+  <script src="profile-picture.js"></script>
+  <<script>
     $(document).ready(function() {
+      // Function to handle profile image upload
+      function handleProfileImageUpload(event) {
+        var input = event.target;
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            $('#profileImagePreview').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+  
+      // Bind the event handler
+      $('#profileImage').on('change', handleProfileImageUpload);
+  
       // Initialize Selectize
       $('#majorInput').selectize({
         plugins: ['remove_button'],
@@ -68,8 +129,24 @@
           // Assign value to the profile or perform any other necessary action
         }
       });
+  
+      // Function to handle graduation date selection
+      function handleGraduationDateSelection() {
+        var selectedDate = $('#graduationDate').val();
+        // Assign the selected graduation date to the profile or perform any other necessary action
+      }
+  
+      // Bind the event handler
+      $('#graduationDate').on('change', handleGraduationDateSelection);
+  
+      // Update display name
+      $('#displayName').on('input', function() {
+        var displayName = $(this).val();
+        $('#displayNameText').text(displayName);
+      });
     });
   </script>
+  
 </head>
 <body class="bg-light">
   <header>
@@ -102,15 +179,21 @@
       <div class="bg-white shadow rounded-lg d-block d-sm-flex">
         <div class="profile-tab-nav border-right">
           <div class="p-4">
-            <div class="img-circle text-center mb-3">
-              <img src="img/user2.jpg" alt="Image" class="shadow">
+            <div class="profile-image-label">
+              <input type="file" id="profileImage" accept="image/*" style="display:none;">
+              <div class="profile-image-container">
+                <img src="img/user2.jpg" alt="Upload Photo" id="profileImagePreview" class="shadow">
+                <div class="upload-text">Upload</div>
+              </div>
+              <label for="profileImage" class="btn btn-light mt-3">Upload Photo</label>
             </div>
-            <h4 class="text-center">Kiran Acharya</h4>
+                      
+            <h4 class="text-center" id="displayNameText">Display Name</h4>
           </div>
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true">
               <i class="fa fa-home text-center mr-1"></i> 
-              Account
+              About Me
             </a>
             <a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab" aria-controls="password" aria-selected="false">
               <i class="fa fa-key text-center mr-1"></i> 
@@ -132,7 +215,7 @@
         </div>
         <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
           <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
-            <h3 class="mb-4">Account Settings</h3>
+            <h3 class="mb-4">About Me</h3>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -170,32 +253,38 @@
 
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Phone number</label>
-                  <input type="text" class="form-control" value="+91 9876543215">
+                    <label>Bio</label>
+                    <input type="text" class="form-control" placeholder="e.g., Socal Kid and Economics @ Princeton">
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Company</label>
-                  <input type="text" class="form-control" value="Kiran Workspace">
-                </div>
-              </div>
+
+              
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="graduationDate" class="form-label">Graduation Date</label>
-                  <input type="text" class="form-control" id="graduationDate" placeholder="e.g., 2026" required>
+                  <select class="form-select" id="graduationDate" required>
+                    <option value="">Choose...</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                  </select>
                   <div class="invalid-feedback">
-                    Please enter your graduation date.
+                    Please select your graduation date.
                   </div>
                 </div>
               </div>
 
               <div class="col-md-12">
                 <div class="form-group">
-                  <label for="bio" class="form-label">Bio</label>
-                  <textarea class="form-control" id="bio" rows="4" placeholder="e.g., Socal Kid and Economics @ Princeton" required></textarea>
+                  <label for="bio" class="form-label">Your perspective on college applications (optional).</label>
+                  <textarea class="form-control" id="bio" rows="4" placeholder="e.g., I applied to only 8 schools because I got accepted to Princeton through Early Action. I focused on writing strong essays, which I believe were the highlight of my application." required></textarea>
                   <div class="invalid-feedback">
-                    Please enter your bio.
+                    Your perspective on college applications (optional).
                   </div>
                 </div>
               </div>
@@ -327,7 +416,7 @@
     </div>
   </section>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>

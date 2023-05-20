@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>InsiderIvy Sign Up</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="form-validation.css" rel="stylesheet">
+
+  <style>
+    .navbar,
+    body {
+      font-family: 'Tinos', serif;
+    }
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .custom-btn {
+      background-color: green;
+      color: white;
+      border: none;
+    }
+
+    .custom-btn:hover {
+      background-color: lightgreen;
+      color: black;
+    }
+  </style>
+
+  <!-- JavaScript dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.default.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Initialize Selectize
+      $('#majorInput').selectize({
+        plugins: ['remove_button'],
+        delimiter: ',',
+        persist: false,
+        create: true,
+        createOnBlur: true,
+        dropdownParent: 'body',
+        placeholder: 'Search for your major',
+        closeAfterSelect: true,
+        onChange: function(value) {
+          // Assign value to the profile or perform any other necessary action
+        }
+      });
+    });
+  </script>
+</head>
+<body class="bg-light">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
+      <div class="container-fluid px-md-3">
+        <a class="navbar-brand" href="#">InsiderIvy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">My Account</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="py-5 my-5">
+    <div class="container">
+      <h1 class="mb-5">Profile Setup</h1>
+      <div class="bg-white shadow rounded-lg d-block d-sm-flex">
+        <div class="profile-tab-nav border-right">
+          <div class="p-4">
+            <div class="img-circle text-center mb-3">
+              <img src="img/user2.jpg" alt="Image" class="shadow">
+            </div>
+            <h4 class="text-center">Kiran Acharya</h4>
+          </div>
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true">
+              <i class="fa fa-home text-center mr-1"></i> 
+              Account
+            </a>
+            <a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab" aria-controls="password" aria-selected="false">
+              <i class="fa fa-key text-center mr-1"></i> 
+              Password
+            </a>
+            <a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab" aria-controls="security" aria-selected="false">
+              <i class="fa fa-user text-center mr-1"></i> 
+              Security
+            </a>
+            <a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab" aria-controls="application" aria-selected="false">
+              <i class="fa fa-tv text-center mr-1"></i> 
+              Application
+            </a>
+            <a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab" aria-controls="notification" aria-selected="false">
+              <i class="fa fa-bell text-center mr-1"></i> 
+              Notification
+            </a>
+          </div>
+        </div>
+        <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+            <h3 class="mb-4">Account Settings</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="displayName" class="form-label">Display Name</label>
+                  <input type="text" class="form-control" id="displayName" placeholder="e.g., John Doe" required>
+                  <div class="invalid-feedback">
+                    Please enter your display name.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="gender" class="form-label">Gender</label>
+                <select class="form-select" id="gender" required>
+                  <option value="">Choose...</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Nonbinary</option>
+                  <option>Prefer not to say</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select your gender.
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="major" class="form-label">What is your major?</label>
+                  <input type="text" class="form-control" id="majorInput" placeholder="Search for your major" required>
+                  <div class="invalid-feedback">
+                    Please select your major.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Phone number</label>
+                  <input type="text" class="form-control" value="+91 9876543215">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Company</label>
+                  <input type="text" class="form-control" value="Kiran Workspace">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="graduationDate" class="form-label">Graduation Date</label>
+                  <input type="text" class="form-control" id="graduationDate" placeholder="e.g., 2026" required>
+                  <div class="invalid-feedback">
+                    Please enter your graduation date.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="bio" class="form-label">Bio</label>
+                  <textarea class="form-control" id="bio" rows="4" placeholder="e.g., Socal Kid and Economics @ Princeton" required></textarea>
+                  <div class="invalid-feedback">
+                    Please enter your bio.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div>
+              <button class="btn btn-primary">Update</button>
+              <button class="btn btn-light">Cancel</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+            <h3 class="mb-4">Password Settings</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Old password</label>
+                  <input type="password" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>New password</label>
+                  <input type="password" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Confirm new password</label>
+                  <input type="password" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-primary">Update</button>
+              <button class="btn btn-light">Cancel</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+            <h3 class="mb-4">Security Settings</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Login</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Two-factor auth</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="recovery">
+                    <label class="form-check-label" for="recovery">
+                    Recovery
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-primary">Update</button>
+              <button class="btn btn-light">Cancel</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
+            <h3 class="mb-4">Application Settings</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="app-check">
+                    <label class="form-check-label" for="app-check">
+                    App check
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                    <label class="form-check-label" for="defaultCheck2">
+                    Lorem ipsum dolor sit.
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-primary">Update</button>
+              <button class="btn btn-light">Cancel</button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="notification" role="tabpanel" aria-labelledby="notification-tab">
+            <h3 class="mb-4">Notification Settings</h3>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="notification1">
+                <label class="form-check-label" for="notification1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum accusantium accusamus, neque cupiditate quis
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="notification2" >
+                <label class="form-check-label" for="notification2">
+                  hic nesciunt repellat perferendis voluptatum totam porro eligendi.
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="notification3" >
+                <label class="form-check-label" for="notification3">
+                  commodi fugiat molestiae tempora corporis. Sed dignissimos suscipit
+                </label>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-primary">Update</button>
+              <button class="btn btn-light">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

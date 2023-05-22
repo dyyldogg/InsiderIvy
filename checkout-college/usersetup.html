@@ -183,7 +183,7 @@
               <input type="file" id="profileImage" accept="image/*" style="display:none;">
               <div class="profile-image-container">
                 <img src="img/user2.jpg" alt="Upload Photo" id="profileImagePreview" class="shadow">
-                <div class="upload-text">Upload</div>
+                <div class="upload-text">Upload Photo</div>
               </div>
               <label for="profileImage" class="btn btn-light mt-3">Upload Photo</label>
             </div>
@@ -197,19 +197,19 @@
             </a>
             <a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab" aria-controls="password" aria-selected="false">
               <i class="fa fa-key text-center mr-1"></i> 
-              Password
+              Background and Academics
             </a>
             <a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab" aria-controls="security" aria-selected="false">
               <i class="fa fa-user text-center mr-1"></i> 
-              Security
+              College Results
             </a>
             <a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab" aria-controls="application" aria-selected="false">
               <i class="fa fa-tv text-center mr-1"></i> 
-              Application
+              Essays
             </a>
             <a class="nav-link" id="notification-tab" data-toggle="pill" href="#notification" role="tab" aria-controls="notification" aria-selected="false">
               <i class="fa fa-bell text-center mr-1"></i> 
-              Notification
+              Consulting
             </a>
           </div>
         </div>
@@ -296,28 +296,215 @@
             </div>
           </div>
           <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
-            <h3 class="mb-4">Password Settings</h3>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Old password</label>
-                  <input type="password" class="form-control">
-                </div>
+            <h3 class="mb-4">Background and Academics</h3>
+            <div class="col-md-6">
+              <label for="ethnicity" class="form-label">Ethnicity</label>
+              <select class="form-select" id="ethnicity" required>
+                <option value="">Choose...</option>
+                <option>Hispanic or Latino</option>
+                
+                <option>American Indian or Alaska Native</option>
+                <option>Asian</option>
+                <option>Black or African American</option>
+                <option>Native Hawaiian or Other Pacific Islander</option>
+                <option>Middle Eastern</option>
+                <option>White</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select your ethnicity.
               </div>
             </div>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>New password</label>
-                  <input type="password" class="form-control">
+                  <label for="highSchoolType" class="form-label">Type of High School</label>
+                  <select class="form-select" id="highSchoolType" required>
+                    <option value="">Choose...</option>
+                    <option value="Public">Public</option>
+                    <option value="Private">Private</option>
+                    <option value="Homeschool">Homeschool</option>
+                    <option value="Online">Online</option>
+                    <option value="Magnet">Magnet</option>
+                    <option value="Charter">Charter</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select the type of high school.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state" required>
+                  <option value="">Choose...</option>
+                  <option>Alabama</option>
+                  <option>Alaska</option>
+                  <option>Arizona</option>
+                  <option>Arkansas</option>
+                  <option>California</option>
+                  <option>Colorado</option>
+                  <option>Connecticut</option>
+                  <option>Delaware</option>
+                  <option>Florida</option>
+                  <option>Georgia</option>
+                  <option>Hawaii</option>
+                  <option>Idaho</option>
+                  <option>Illinois</option>
+                  <option>Indiana</option>
+                  <option>Iowa</option>
+                  <option>Kansas</option>
+                  <option>Kentucky</option>
+                  <option>Louisiana</option>
+                  <option>Maine</option>
+                  <option>Maryland</option>
+                  <option>Massachusetts</option>
+                  <option>Michigan</option>
+                  <option>Minnesota</option>
+                  <option>Mississippi</option>
+                  <option>Missouri</option>
+                  <option>Montana</option>
+                  <option>Nebraska</option>
+                  <option>Nevada</option>
+                  <option>New Hampshire</option>
+                  <option>New Jersey</option>
+                  <option>New Mexico</option>
+                  <option>New York</option>
+                  <option>North Carolina</option>
+                  <option>North Dakota</option>
+                  <option>Ohio</option>
+                  <option>Oklahoma</option>
+                  <option>Oregon</option>
+                  <option>Pennsylvania</option>
+                  <option>Rhode Island</option>
+                  <option>South Carolina</option>
+                  <option>South Dakota</option>
+                  <option>Tennessee</option>
+                  <option>Texas</option>
+                  <option>Utah</option>
+                  <option>Vermont</option>
+                  <option>Virginia</option>
+                  <option>Washington</option>
+                  <option>West Virginia</option>
+                  <option>Wisconsin</option>
+                  <option>Wyoming</option>
+                  <option>American Samoa</option>
+                  <option>Guam</option>
+                  <option>Northern Mariana Islands</option>
+                  <option>Puerto Rico</option>
+                  <option>U.S. Virgin Islands</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a state.
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="description" class="form-label">How would you describe yourself?</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="first_gen" id="firstGenCheckbox">
+                    <label class="form-check-label" for="firstGenCheckbox">
+                      First-generation
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="legacy" id="legacyCheckbox">
+                    <label class="form-check-label" for="legacyCheckbox">
+                      Legacy to your enrolled university
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="recruited_athlete" id="recruitedAthleteCheckbox">
+                    <label class="form-check-label" for="recruitedAthleteCheckbox">
+                      Recruited athlete
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="low_income" id="lowIncomeCheckbox">
+                    <label class="form-check-label" for="lowIncomeCheckbox">
+                      Low income
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="international_applicant" id="internationalApplicantCheckbox">
+                    <label class="form-check-label" for="internationalApplicantCheckbox">
+                      International applicant
+                    </label>
+                  </div>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Confirm new password</label>
-                  <input type="password" class="form-control">
+                  <label for="gpaUnweighted" class="form-label">GPA (Unweighted)</label>
+                  <input type="text" class="form-control" id="gpaUnweighted" placeholder="e.g., 4.0" required>
+                  <div class="invalid-feedback">
+                    Please enter your unweighted GPA.
+                  </div>
                 </div>
               </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="gpaScale" class="form-label">GPA Scale</label>
+                  <input type="text" class="form-control" id="gpaScale" placeholder="e.g., 5" required>
+                  <div class="invalid-feedback">
+                    Please enter the GPA scale.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="gpaWeighted" class="form-label">GPA (Weighted)</label>
+                  <input type="text" class="form-control" id="gpaWeighted" placeholder="e.g., 4.3" required>
+                  <div class="invalid-feedback">
+                    Please enter your weighted GPA.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="rankInClass" class="form-label">Rank in Class</label>
+                  <select class="form-select" id="rankInClass" required>
+                    <option value="">Choose...</option>
+                    <option>Unranked</option>
+                    <option>Valedictorian</option>
+                    <option>Salutatorian</option>
+                    <option>Top 1%</option>
+                    <option>Top 2%</option>
+                    <option>Top 5%</option>
+                    <option>Top 10%</option>
+                    <option>Top 25%</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select your rank in class.
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="testOptional">
+                  <label class="form-check-label" for="testOptional">
+                    Test Optional
+                  </label>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="satSuperscore" class="form-label">SAT Superscore</label>
+                  <input type="text" class="form-control" id="satSuperscore" placeholder="Leave blank if not reported.">
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="actSuperscore" class="form-label">ACT Superscore</label>
+                  <input type="text" class="form-control" id="actSuperscore" placeholder="Leave blank if not reported.">
+                </div>
+              </div>
+              
             </div>
             <div>
               <button class="btn btn-primary">Update</button>
@@ -325,31 +512,9 @@
             </div>
           </div>
           <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
-            <h3 class="mb-4">Security Settings</h3>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Login</label>
-                  <input type="text" class="form-control">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Two-factor auth</label>
-                  <input type="text" class="form-control">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="recovery">
-                    <label class="form-check-label" for="recovery">
-                    Recovery
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h3 class="mb-4">College Results</h3>
+            
+            
             <div>
               <button class="btn btn-primary">Update</button>
               <button class="btn btn-light">Cancel</button>
@@ -416,7 +581,10 @@
     </div>
   </section>
 
-  
+  <!-- Other HTML code -->
+<script src="path/to/college-application.js"></script>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>

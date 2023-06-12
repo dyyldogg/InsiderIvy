@@ -1,148 +1,167 @@
-<!DOCTYPE HTML>
-<!--
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>About - Alpha by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* CSS styling for the About page */
-			body {
-				font-family: Arial, sans-serif;
-				margin: 0;
-				padding: 20px;
-			}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>About InsiderIvy</title>
 
-			h1 {
-				text-align: center;
-			}
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
 
-			.about-content {
-				max-width: 800px;
-				margin: 0 auto;
-				background-color: #f1f1f1;
-				padding: 20px;
-				border-radius: 5px;
-			}
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-			.about-text {
-				margin-bottom: 20px;
-			}
+  <!-- Custom styles for this template -->
+  <style>
+    .navbar,
+    body {
+      font-family: 'Tinos', serif;
+    }
 
-			.about-text p {
-				margin: 0;
-				line-height: 1.6;
-			}
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
 
-			.about-quote {
-				font-style: italic;
-				margin-bottom: 20px;
-			}
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
 
-			.about-cta {
-				text-align: center;
-			}
+    .custom-btn {
+      background-color: green;
+      color: white;
+      border: none;
+    }
 
-			.about-cta p {
-				margin: 0;
-			}
+    .custom-btn:hover {
+      background-color: lightgreen;
+      color: black;
+    }
 
-			.about-cta a {
-				display: inline-block;
-				margin-top: 10px;
-				padding: 10px 20px;
-				background-color: #4CAF50;
-				color: #fff;
-				text-decoration: none;
-				border-radius: 5px;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
+    
+  </style>
 
-			<!-- Header -->
-				<header id="header">
-					<h1><a href="index.html">Alpha</a> by HTML5 UP</h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#" class="icon solid fa-angle-down">Layouts</a>
-								<ul>
-									<li><a href="generic.html">Generic</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="elements.html">Elements</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option One</a></li>
-											<li><a href="#">Option Two</a></li>
-											<li><a href="#">Option Three</a></li>
-											<li><a href="#">Option Four</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#" class="button">Sign Up</a></li>
-						</ul>
-					</nav>
-				</header>
+</head>
 
-			<!-- Main -->
-				<section id="main" class="container">
-					<header>
-						<h2>About</h2>
-						<p>A college application network connecting students.</p>
-					</header>
-					<div class="box">
-						<div class="about-content">
-							<div class="about-text">
-								<p>At Insider Ivy, we understand the challenges and expenses associated with the college application process. As former high school students ourselves, we faced the daunting task of applying to colleges without access to expensive tutors or consultants.</p>
-      <p>Instead, we relied on the generosity of older students we knew who shared their application experiences and insights. We realized the value of connecting current high school students with a network of current college students who can provide guidance and support.</p>
-      <p>Our mission is to make this invaluable resource accessible to all students. We believe that college consulting shouldn't be limited to those who can afford it. Through our platform, high school students can connect with college students who have successfully navigated the application process for the colleges they aspire to attend.</p>
-      <p>Not only does this provide affordable assistance to high school students, but it also offers college students an opportunity to share their knowledge, help others, and earn money.</p>
+
+
+
+
+<body class="bg-light">
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
+    <div class="container-fluid px-md-3">
+      <a class="navbar-brand" href="#">InsiderIvy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Account</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <main style="margin-top: 120px;">
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+      <h2>Create an Account</h2>
+      <p class="lead"></p>
     </div>
 
-    <div class="about-quote">
-      <p>"We believe in empowering students to achieve their college dreams by leveraging the experiences of those who have gone before them."</p>
+    <div class="row g-5">
+      <div class="col-md-6">
+        <h4 class="mb-3"></h4>
+        <!-- <form class="needs-validation" novalidate> -->
+
+        <form class="contact-form"> <!-- //////////////// Example - add "firstName" to input class -->
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="displayName" class="form-label">Display Name</label>
+              <input type="text" class="form-control displayName" id="displayName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid display name is required.
+              </div>
+            </div>
+
+      
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control email" id="email" placeholder="you@example.com" required>
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+
+
+            <div class="col-12">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control password" id="password" placeholder="Your password" required>
+                <div class="invalid-feedback">
+                  Please enter a valid password.
+                </div>
+              </div>
+              
+    
+
+          <hr class="my-4">
+
+
+          <button type="submit">Submit</button>
+          <!-- <button class="w-100 btn btn-lg custom-btn" type="submit">Sign Up</button> -->
+        </form>
+
+          <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+          <script src="app.js"></script>
+
+      </div>
     </div>
+  </main>
 
-    <div class="about-cta">
-      <p>Ready to get started?</p>
-      <a href="signup.html">Sign up now</a>
-    </div>
-  </div>
-  			<!-- Footer -->
-			  <footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-					<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</footer>
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2023 InsiderIvy</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+</div>
+<script src="script.js" type="module"></script>
 
-	</div>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script> -->
 
-	<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Place the Firebase script tags before the custom script tag -->
+<!-- Place the Firebase script tags before the custom script tag -->
+
+
+
+
+
 </body>
-
 </html>

@@ -82,55 +82,9 @@
 
         <div class="row g-5">
           <div class="col-md-6">
-            <h4 class="mb-3">Student Details</h4>
+            <h4 class="mb-3">Account Details</h4>
             <form class="needs-validation" novalidate>
               <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="firstName" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                  <div class="invalid-feedback">
-                    Valid first name is required.
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="lastName" class="form-label">Last name</label>
-                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                  <div class="invalid-feedback">
-                    Valid last name is required.
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="age" class="form-label">Age</label>
-                  <input type="number" class="form-control" id="age" placeholder="Your age" required>
-                  <div class="invalid-feedback">
-                    Please enter your age.
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="college" class="form-label">College You Attend</label>
-                  <input type="text" class="form-control" id="college" placeholder="Search for your college" required>
-                  <div class="invalid-feedback">
-                    Please select your college.
-                  </div>
-                </div>
-                
-                
-
-               
-
-                
-
-                <div class="col-md-6">
-                  <label for="zip" class="form-label">ZIP Code</label>
-                  <input type="text" pattern="[0-9]*" class="form-control" id="zip" placeholder="Your ZIP code" required>
-                  <div class="invalid-feedback">
-                    Please enter a valid ZIP code.
-                  </div>
-                </div>
-
                 <div class="col-12">
                   <label for="email" class="form-label">Email Address</label>
                   <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
@@ -140,131 +94,28 @@
                 </div>
 
                 <div class="col-12">
-                  <label for="phone" class="form-label">Phone Number</label>
-                  <input type="tel" class="form-control" id="phone" placeholder="Your phone number" required>
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password" required>
                   <div class="invalid-feedback">
-                    Please enter a valid phone number.
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="unweightedGPA" class="form-label">Unweighted GPA</label>
-                  <select class="form-select" id="unweightedGPA" required>
-                    <option value="">Choose...</option>
-                    <option value="4.0">A (4.0)</option>
-                    <option value="3.7">A- (3.7)</option>
-                    <option value="3.3">B+ (3.3)</option>
-                    <option value="3.0">B (3.0)</option>
-                    <option value="2.7">B- (2.7) or below</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please select the best way to describe your unweighted GPA.
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="weightedGPA" class="form-label">Weighted GPA (optional)</label>
-                  <input type="number" step="0.01" class="form-control" id="weightedGPA" placeholder="Your weighted GPA">
-                  <div class="invalid-feedback">
-                    Please enter a valid weighted GPA.
+                    Please enter a password.
                   </div>
                 </div>
 
                 <div class="col-12">
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="satOption" id="satOption" value="SAT">
-                        <label class="form-check-label" for="satOption">SAT</label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="actOption" id="actOption" value="ACT">
-                        <label class="form-check-label" for="actOption">ACT</label>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="satActOption" id="noSatActOption" value="None">
-                        <label class="form-check-label" for="noSatActOption">No</label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="satActOption" id="notSureOption" value="Not Sure">
-                        <label class="form-check-label" for="notSureOption">Not Sure Yet</label>
-                      </div>
-                    </div>
+                  <label for="confirmPassword" class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                  <div class="invalid-feedback">
+                    Please confirm your password.
                   </div>
-                </div>
-                
-                <div class="col-12">
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="form-group" id="satScoreContainer" style="display: none;">
-                        <label for="satScore">SAT Score:</label>
-                        <input type="text" class="form-control" id="satScore" placeholder="Enter your SAT score">
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="form-group" id="actScoreContainer" style="display: none;">
-                        <label for="actScore">ACT Score:</label>
-                        <input type="text" class="form-control" id="actScore" placeholder="Enter your ACT score">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <script>
-                  document.addEventListener("DOMContentLoaded", function() {
-                    var satOption = document.getElementById("satOption");
-                    var actOption = document.getElementById("actOption");
-                    var satScoreContainer = document.getElementById("satScoreContainer");
-                    var actScoreContainer = document.getElementById("actScoreContainer");
-                
-                    satOption.addEventListener("change", function() {
-                      satScoreContainer.style.display = this.checked ? "block" : "none";
-                    });
-                
-                    actOption.addEventListener("change", function() {
-                      actScoreContainer.style.display = this.checked ? "block" : "none";
-                    });
-                
-                    var noSatActOption = document.getElementById("noSatActOption");
-                    var notSureOption = document.getElementById("notSureOption");
-                
-                    noSatActOption.addEventListener("change", function() {
-                      satScoreContainer.style.display = "none";
-                      actScoreContainer.style.display = "none";
-                      satOption.checked = false;
-                      actOption.checked = false;
-                    });
-                
-                    notSureOption.addEventListener("change", function() {
-                      satScoreContainer.style.display = "none";
-                      actScoreContainer.style.display = "none";
-                      satOption.checked = false;
-                      actOption.checked = false;
-                    });
-                  });
-                </script>
-                
-                
-                
-                
-
-                <div class="col-12">
-                  <div id="scoreInputContainer" style="display: none;">
-                    <label for="scoreInput" class="form-label">SAT/ACT Score</label>
-                    <input type="text" class="form-control" id="scoreInput" placeholder="Your SAT/ACT Score">
-                    <div class="invalid-feedback">
-                      Please enter a valid SAT/ACT score.
-                    </div>
+                  <div id="passwordMatchFeedback" class="invalid-feedback" style="display: none;">
+                    Passwords do not match.
                   </div>
                 </div>
               </div>
 
-
               <hr class="my-4">
 
-              <a href="usersetup.html" class="w-100 btn btn-lg custom-btn" role="button">Sign Up</a>
+              <button class="w-100 btn btn-lg custom-btn" type="submit">Sign Up</button>
             </form>
           </div>
         </div>
@@ -281,22 +132,23 @@
     </div>
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
-      const satActCheckbox = document.getElementById('satActCheckbox');
-      const scoreInputContainer = document.getElementById('scoreInputContainer');
+      const password = document.getElementById('password');
+      const confirmPassword = document.getElementById('confirmPassword');
+      const passwordMatchFeedback = document.getElementById('passwordMatchFeedback');
 
-      // Function to toggle SAT/ACT score input based on checkbox selection
-      function handleSatActCheckboxChange() {
-        if (satActCheckbox.checked) {
-          scoreInputContainer.style.display = 'block';
+      function validatePassword() {
+        if (password.value !== confirmPassword.value) {
+          confirmPassword.setCustomValidity("Passwords do not match");
+          passwordMatchFeedback.style.display = 'block';
         } else {
-          scoreInputContainer.style.display = 'none';
+          confirmPassword.setCustomValidity("");
+          passwordMatchFeedback.style.display = 'none';
         }
       }
 
-      // Event listener
-      satActCheckbox.addEventListener('change', handleSatActCheckboxChange);
+      password.addEventListener('change', validatePassword);
+      confirmPassword.addEventListener('keyup', validatePassword);
     </script>
   </body>
 </html>

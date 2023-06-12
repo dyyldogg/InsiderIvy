@@ -182,8 +182,8 @@
             <div class="profile-image-label">
               <input type="file" id="profileImage" accept="image/*" style="display:none;">
               <div class="profile-image-container">
-                <img src="img/user2.jpg" alt="Upload Photo" id="profileImagePreview" class="shadow">
-                <div class="upload-text">Upload Photo</div>
+                
+              
               </div>
               <label for="profileImage" class="btn btn-light mt-3">Upload Photo</label>
             </div>
@@ -329,6 +329,20 @@
                   </select>
                   <div class="invalid-feedback">
                     Please select the type of high school.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="unweightedGPA" class="form-label">Unweighted GPA</label>
+                  <select class="form-select" id="unweightedGPA" required>
+                    <option value="">Choose...</option>
+                    <option value="4.0">A (4.0)</option>
+                    <option value="3.7">A- (3.7)</option>
+                    <option value="3.3">B+ (3.3)</option>
+                    <option value="3.0">B (3.0)</option>
+                    <option value="2.7">B- (2.7) or below</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select the best way to describe your unweighted GPA.
                   </div>
                 </div>
               </div>

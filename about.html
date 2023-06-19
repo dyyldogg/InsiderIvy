@@ -1,5 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,44 +46,69 @@
       color: black;
     }
 
-    .about-content {
+    .about-wrapper {
+      margin: 50px auto;
       max-width: 800px;
-      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-heading {
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 0;
+      color: #333;
+    }
+
+    .about-box {
       background-color: #f1f1f1;
-      padding: 20px;
-      border-radius: 5px;
+      padding: 40px;
+      border-radius: 8px;
+      margin-top: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .about-text {
-      margin-bottom: 20px;
-    }
-
-    .about-text p {
-      margin: 0;
+      margin-bottom: 30px;
+      text-align: left;
+      color: #555;
       line-height: 1.6;
     }
 
     .about-quote {
       font-style: italic;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      color: #777;
     }
 
     .about-cta {
       text-align: center;
+      margin-top: 40px;
     }
 
     .about-cta p {
       margin: 0;
+      color: #555;
+      font-weight: bold;
     }
 
     .about-cta a {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
+      margin-top: 20px;
+      padding: 14px 24px;
       background-color: #4CAF50;
       color: #fff;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .about-cta a:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      margin-top: 50px;
     }
   </style>
 
@@ -116,32 +142,24 @@
 
   <div class="container">
     <main style="margin-top: 120px;">
-      <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-        <h2>InsiderIvy - Who We Are</h2>
-        <p class="lead"></p>
-      </div>
+      <div class="about-wrapper">
+        <h2 class="about-heading">Our Mission</h2>
+        <div class="about-box">
+          <div class="about-text">
+            <p>Our mission at Insider Ivy is to provide affordable college consulting services to current high school students. We believe in offering fresh insights and guidance, backed by accomplished students who are currently attending top universities. Unlike traditional college consulting services, which often rely on outdated knowledge, we have a unique advantage. Our team consists of students who have recently gone through the college admissions process themselves, giving us up-to-date knowledge of the evolving trends, challenges, and expectations that applicants face today.</p>
+            <p>We understand that college consulting can be expensive and inaccessible to many students. That's why we aim to break down financial barriers by offering our services at affordable rates. We believe that every student should have the opportunity to receive personalized guidance and maximize their chances of gaining admission to their dream colleges.</p>
+            <p>At Insider Ivy, we not only support high school students but also empower college students. We provide an easy and flexible platform for talented individuals attending top universities to share their expertise and get paid for their valuable insights. By creating this opportunity, we foster a community that promotes knowledge sharing, collaboration, and personal growth among college students.</p>
+            <p>We provide personalized guidance tailored to address the individual needs and goals of our clients. Whether it's crafting compelling essays, strategizing extracurricular activities, or selecting the right colleges, our team is dedicated to providing personalized support every step of the way.</p>
+            <p>Join Insider Ivy today and let us help you unlock your full potential, navigate the college admissions process with confidence, and achieve your academic and career aspirations. Together, we'll make your college dreams a reality.</p>
+          </div>
 
-      <div class="row g-5">
-        <div class="col-md-6">
-          <h4 class="mb-3"></h4>
+          <div class="about-quote">
+            <p>"We believe in empowering students to achieve their college dreams by leveraging the experiences of those who have gone before them."</p>
+          </div>
 
-          <div class="about-content">
-            <div class="about-text">
-              <p>At Insider Ivy, we understand the challenges and expenses associated with the college application process. As former high school students ourselves, we faced the daunting task of applying to colleges without access to expensive tutors or consultants.</p>
-              <p>Instead, we relied on the generosity of older students we knew who shared their application experiences and insights. We realized the value of connecting current high school students with a network of current college students who can provide guidance and support.</p>
-              <p>Our mission is to make this invaluable resource accessible to all students. We believe that college consulting shouldn't be limited to those who can afford it. Through our platform, high school students can connect with college students who have successfully navigated the application process for the colleges they aspire to attend.</p>
-              <p>Not only does this provide affordable assistance to high school students, but it also offers college students an opportunity to share their knowledge, help others, and earn money.</p>
-            </div>
-
-            <div class="about-quote">
-              <p>"We believe in empowering students to achieve their college dreams by leveraging the experiences of those who have gone before them."</p>
-            </div>
-
-            <div class="about-cta">
-              <p>Ready to get started?</p>
-              <a href="signup.html">Sign up now</a>
-            </div>
+          <div class="about-cta">
+            <p>Ready to get started?</p>
+            <a href="signup.html">Sign up now</a>
           </div>
         </div>
       </div>
